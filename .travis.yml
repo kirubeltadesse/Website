@@ -24,3 +24,7 @@ before_script:
 
 script:
 - python manage.py syncdb --noinput
+skip_build:
+- docs/*
+- README.md
+- LICENSE
