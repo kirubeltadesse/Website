@@ -1,27 +1,27 @@
 language: python
 
-#python:
+python:
 #- 2.6
-#- 2.7
+- 2.7
 
 services: postgresql
 
 env:
-- DJANGO=1.4.1
+- DJANGO=1.11.2
 
-before_install:
-- export DJANGO_SETTINGS_MODULE=your_project.settings
-- export PYTHONPATH=$HOME/builds/your_github_username/your_repo
-- export PIP_USE_MIRRORS=true
+#before_install:
+#- export DJANGO_SETTINGS_MODULE=your_project.settings
+#- export PYTHONPATH=$HOME/builds/your_github_username/your_repo
+#- export PIP_USE_MIRRORS=true
 
-install:
+#install:
 #- pip install -r requirements.txt
-- pip install django==$DJANGO --quiet
-- pip install psycopg2 --quiet
+#- pip install django==$DJANGO --quiet
+#- pip install psycopg2 --quiet
 
 before_script:
 - psql -c "CREATE DATABASE mydb;" -U postgres
-#script:
+script: pytest
 #- python manage.py syncdb #--noinput
 #- python manage.py migrate 
 
