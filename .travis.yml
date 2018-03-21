@@ -9,7 +9,7 @@ services: postgresql
 # command to install dependencies
 #services: postgresql
 env:
-- DJANGO=1.11.2
+- DJANGO=1.12.2
 '''
 before_install:
 - export DJANGO_SETTINGS_MODULE=your_project.settings
