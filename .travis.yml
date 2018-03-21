@@ -1,7 +1,9 @@
 language: python
-
 python:
-- "2.7"
+#- 2.6
+- 2.7
+
+services: postgresql
 
 # command to install dependencies
 #services: postgresql
@@ -14,14 +16,47 @@ before_install:
 - export PIP_USE_MIRRORS=true
 '''
 
+#before_install:
+#- export DJANGO_SETTINGS_MODULE=myblog.settings
+#- export PYTHONPATH=$HOME/builds/kirubeltadesse/Website
+#- export PIP_USE_MIRRORS=true
+
 install:
-- pip install -r requirements.txt
-- pip install codeclimate-test-reporter
-- pip install -q Django==$DJANGO
+#- pip install -r requirements.txt
+- pip install django==$DJANGO --quiet
+#- pip install psycopg2 --quiet
 
-script:
-- export DJANGO_SECRETKEY=secret # needed because settings.py pulls it from os.environ
-- coverage run --source=habitica_slack manage.py test # create test coverage report
+before_script:
+- python manage.py runserver &
+- psql -c "CREATE DATABASE mydb;" -U postgres
 
-after_script:
-- codeclimate-test-reporter --file .coverage # send test coverage report to code climate
+script: 
+#- coverage python manage.py syncdb #--noinput
+- python manage.py makemigrations
+- python manage.py migrate 
+- python manage.py test myblog
+
+skip_build:
+- docs/*
+- README.md
+- LICENSE
+
+#notifcations:
+#  slack:
+#	on_success: always
+#		
+#notifcations:
+#   email:
+#	 recipients:
+#	   - youremail@email.com
+#		on_success: always
+#		on_failure: never
+#		
+#notifcations:
+#   email: false
+#	 recipients:
+#	   - youremail@email.com
+#		on_success: always
+#		on_failure: never
+#	
+
