@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <html>
 	<head>
-		<title>This is Kirube Web site</title>
+		<title>Welcome</title>
 		<meta charset="utf-8"/>
 		{% load staticfiles %}
 		<link rel='stylesheet' href="{% static 'personal/css/bootstrap.min.css' %}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 		<style type="text/css">
 			html
 			body {
 				height:100%
 			}
 		</style>
-
 	</head>
 	
 	<body class="body" style="background-color:#f7f7f7">
 		<div class="container-fluid" style="min-height:95%;">	
-			<div class="row">
-				<div class="col-sm">
-					<br>
-					<center>
-						<img src="{% static 'personal/img/profile.jpg' %}" class="img-responsive" style="max-height:100px;" alt='face'>
-					</center>
-				</div>
-				<div class="col-sm-10">
-					<br>
-					<center>
-					<h3> Graduate Student at Purdue University </h3>
-					</center>
-				</div>
-			</div><hr>
-
+		<div class="row">
+		<div class="col-sm">
+			<br>
+			<center>
+				<img src="{% static 'personal/img/profile.jpg' %}" class="img-responsive" style="max-height:100px;" alt='face'>
+			</center>
+		</div>
+		<div class="col-sm-10">
+			<br>
+			<center>
+			<h3> Graduate Student at Purdue University </h3>
+			</center>
 			<dir class="row">
 				<div class="col-sm">
-				<br>
-
-				<br>
-					<dir class="well bs-sidebar" id="sidebar" stype="background-color:#fff">
-						<ul class="nav nav-pills nav-stacked">
-							<li><a href='/'>Home</a></li>
-							<li><a href='/blog'>Blog</a></li>
-							<li><a href='/resume'>Resume</a></li>
-							<li><a href='/portfolio'>Portfolio</a></li>
-							<li><a href='/contact'>Contact</a></li>
-						</ul>
-					</dir>
-				</dir>
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+						<a class="navbar-brand" href="#">Kirubel Tadesse</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+						</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+							</li> 
+							<li class="nav-item">  <a class="nav-link" href="#">Resume</a>	</li>
+							<li class="nav-item">  <a class="nav-link" href="#">Blog</a>	</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Social Medias</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">LinkedIn</a>
+							<a class="dropdown-item" href="#">Facebook</a>
+							<div class="dropdown-divider">
+						</div>
+						<a class="dropdown-item" href="#">Twitter</a>
+					</div> 
+					</li>
+					<li class="nav-item">
+						<!--a class="nav-link disabled" href="#">Disabled</a-->
+			  	  </li>
+					  </ul>
+					  <form class="form-inline my-2 my-lg-0">
+					   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					  </form>
+					</div>
+					</nav>
+					<hr>
+				</div>
+			</div>
 				<div class="col-sm-10">
 					<div class='container-fluid'>
 					<br><br>
@@ -60,13 +74,15 @@
 				</div>
 			</div>
 		</div>
-		<footer>
-			<div class="container-fluid" style='margin-left:15px'>
-				<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank"> Twitter</a>
-				| <a href="#" target="blank">Google+</a></p>
-			</div>
-		</footer>
 	</body>
+
+	<br><br>
+	<footer class="footer">
+		<div class="container" style='margin-left:15px'>
+			<p class="text-muted"><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank"> Twitter</a>
+			| <a href="#" target="blank">Google+</a></p>
+		</div>
+	</footer>
 </html>
 
 
