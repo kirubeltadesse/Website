@@ -5,19 +5,24 @@
 		<title>Welcome</title>
 		<meta charset="utf-8"/>
 		{% load staticfiles %}
-		<link rel='stylesheet' href="{% static 'personal/css/bootstrap.min.css' %}">
+		<!-- <link rel='stylesheet' href="{% static 'personal/css/bootstrap.min.css' %}"> -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<style type="text/css">
 			html,
 			body {
 				height:95%
-				width:80%
 			}
 		</style>
 	</head>
-	
+
+
 	<body class="body" style="background-color:#f7f7f7">
-		<div class="container-fluid" style="min-height:95%;">	
+		<div class="container-fluid" style="min-height:95%;">
 		<div class="row">
 		<div class="col-sm">
 			<br>
@@ -40,19 +45,19 @@
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item active">
 								<a class="nav-link" href="/contact/">contact<span class="sr-only">(current)</span></a>
-							</li> 
+							</li>
 							<li class="nav-item">  <a class="nav-link" href="/resume/">Resume</a>	</li>
 							<li class="nav-item">  <a class="nav-link" href="/blog/">Blog</a>	</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Social Medias</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">LinkedIn</a>
-							<a class="dropdown-item" href="#">GitHub</a>
-							<a class="dropdown-item" href="#">Facebook</a>
+							<a class="dropdown-item" href="https://www.linkedin.com/in/kirubeltadesse/">LinkedIn</a>
+							<a class="dropdown-item" href="https://github.com/kirubeltadesse">GitHub</a>
+							<a class="dropdown-item" href="https://www.facebook.com/kiyamelak">Facebook</a>
 							<div class="dropdown-divider">
 						</div>
-						<a class="dropdown-item" href="#">Twitter</a>
-					</div> 
+						<a class="dropdown-item" href="https://twitter.com/kirubelmel">Twitter</a>
+					</div>
 					</li>
 					<li class="nav-item">
 						<!--a class="nav-link disabled" href="#">Disabled</a-->
@@ -76,17 +81,18 @@
 				</div>
 			</div>
 		</div>
+		<form class="" action="index.html" method="post">
+			<input type="text" name="" value="">
+			<label for=""></label>
+
+		</form>
 	</body>
 
 	<br><br>
 	<footer class="footer">
 		<div class="container" style='margin-left:15px'>
-			<p class="text-muted"><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank"> Twitter</a>
-			| <a href="#" target="blank">Google+</a></p>
+			<p class="text-muted"><a href="/contact/" target="blank">Contact</a> | <a href="https://www.linkedin.com/in/kirubeltadesse/" target="blank">LinkedIn</a> | <a href="https://github.com/kirubeltadesse" target="blank"> GitHub</a>
+			| <a href="https://plus.google.com/u/1/104889618200495871333" target="blank">Google+</a></p>
 		</div>
 	</footer>
 </html>
-
-
-
-

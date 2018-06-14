@@ -9,5 +9,6 @@
 
 
 ## Personal website development repository
+This website page is still under-development. I will be released soon. It will content some basic information about myself.
 
 
